@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="3" failures="0" errors="0" time="1.416">
+    <testsuite name="test/main.test.js" timestamp="2024-12-03T07:56:35.088Z" hostname="DESKTOP-6HACDE0" tests="3" failures="0" errors="0" skipped="0" time="0.0145121">
+        <testcase classname="test/main.test.js" name="getCartData &gt; should return an empty object if localStorage is empty" time="0.0050475">
+        </testcase>
+        <testcase classname="test/main.test.js" name="getCartData &gt; should return parsed cart data from localStorage" time="0.0014025">
+        </testcase>
+        <testcase classname="test/main.test.js" name="getCartData &gt; should return an empty object if localStorage contains invalid JSON" time="0.0013846">
+        </testcase>
+    </testsuite>
+</testsuites>

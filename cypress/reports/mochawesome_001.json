@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-27T16:35:37.225Z",
+    "end": "2024-10-27T16:35:49.105Z",
+    "duration": 11880,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a2f7e772-06ed-4b86-995a-0370145b9f8e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\test.cy.js",
+      "file": "cypress\\e2e\\test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d385a426-1ba7-40ac-b74f-8201d73c0f76",
+          "title": "Shopping Cart Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add an item to the cart",
+              "fullTitle": "Shopping Cart Functionality should add an item to the cart",
+              "timedOut": null,
+              "duration": 599,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Click the \"Add to Cart\" button for the first item (Samsung Galaxy S10)\ncy.get('.item_box').first().find('.add_item').click();\n// Verify that the item appears in the cart\ncy.get('#cart_items').should('contain', 'iPhone 15');\n// Ensure the total price is updated and not zero\ncy.get('#total_price').should('not.contain', '$0');",
+              "err": {},
+              "uuid": "19ccb20d-13a5-4225-81b5-4ac3c9c96da5",
+              "parentUUID": "d385a426-1ba7-40ac-b74f-8201d73c0f76",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should remove an item from the cart",
+              "fullTitle": "Shopping Cart Functionality should remove an item from the cart",
+              "timedOut": null,
+              "duration": 802,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Add the first item to the cart\ncy.get('.item_box').first().find('.add_item').click();\n// Click the \"Remove\" button next to the added item\ncy.get('.remove_item').click();\n// Verify that the cart is empty after removing the item\ncy.get('#cart_items').should('contain', 'Cart empty');\ncy.get('#total_price').should('contain', 'Total: $0');",
+              "err": {},
+              "uuid": "dd04c01d-a54a-4e45-af3a-1b2981f7cd8b",
+              "parentUUID": "d385a426-1ba7-40ac-b74f-8201d73c0f76",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should clear the cart",
+              "fullTitle": "Shopping Cart Functionality should clear the cart",
+              "timedOut": null,
+              "duration": 850,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Add two items to the cart\ncy.get('.item_box').first().find('.add_item').click();\ncy.get('.item_box').eq(1).find('.add_item').click();\n// Click the \"Clear Cart\" button\ncy.get('#clear_cart').click();\n// Verify that the cart is empty after clearing it\ncy.get('#cart_items').should('contain', 'Cart empty');\ncy.get('#total_price').should('contain', 'Total: $0');",
+              "err": {},
+              "uuid": "260ff44f-b0f9-40c6-b19e-6816a4316a0d",
+              "parentUUID": "d385a426-1ba7-40ac-b74f-8201d73c0f76",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "19ccb20d-13a5-4225-81b5-4ac3c9c96da5",
+            "dd04c01d-a54a-4e45-af3a-1b2981f7cd8b",
+            "260ff44f-b0f9-40c6-b19e-6816a4316a0d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2251,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobiliti</title>
+    <link rel="icon" href="mobile-phone.ico" type="image/x-icon">
+
+   <!-- Connecting an external CSS file -->
+    <link rel="stylesheet" href="styles.css"> <!-- Make sure the path is correct -->
+</head>
+<body>
+    <div class="container">
+       <!-- Goods Section -->
+        <div class="items">
+            <div class="item_box">
+                <h3 class="item_title">iPhone 15</h3>
+                <p>Price: <span class="item_price">20</span>$</p>
+                <button class="add_item" data-id="7">add to cart</button>
+            </div>
+
+            <div class="item_box">
+                <h3 class="item_title">Samsung Galaxsy S</h3>
+                <p>Price: <span class="item_price">100</span>$</p>
+                <button class="add_item" data-id="2">add to cart</button>
+            </div>
+
+            <div class="item_box">
+                <h3 class="item_title">Moto G</h3>
+                <p>Price: <span class="item_price">1000</span>$</p>
+                <button class="add_item" data-id="5">add to cart</button>
+            </div>
+        </div>
+
+      <!-- Basket section -->
+        <div id="cart_content">
+            <h2><Basket</h2>
+            <ul id="cart_items"></ul>
+            <p id="total_price">Total: $0</p>
+            <button id="checkout">Place an order</button>
+            <button id="clear_cart">Empty the trash</button>
+        </div>
+    </div>
+   <!-- Connecting the JavaScript file -->
+   <script type="module" src="script.js"></script>
+</body>
+</html>
+</button>
